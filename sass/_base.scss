@@ -1,0 +1,57 @@
+
+:root{
+    --color-primary:hsl(322, 100%, 66%);
+
+
+    --color-neutral-pale:hsl(193, 100%, 96%);
+    --color-neutral-dark:hsl(192, 100%, 9%);
+    --color-neutral-gray:hsl(208, 11%, 55%);
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit; 
+}
+  
+html {
+    font-size: 62.5%; 
+
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    
+    @include respond(big-desktop){
+        font-size: 63%;
+    }
+}
+
+body {
+    font-family: 'open sans',sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-size: 1.6rem; 
+    color:var(--color-neutral-gray);
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    color:var(--color-neutral-dark);
+}
+
+a{
+    text-decoration: none;
+}

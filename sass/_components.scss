@@ -1,0 +1,387 @@
+///////////////
+///HEADER
+.header{
+
+    &__logo{
+        width:24rem;
+        height:4rem;
+    }
+    &__nav{
+        display: inline-block;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(tab-port) {
+            padding-bottom: 4rem;
+        }
+    }
+    &__container{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        @include respond(tab-port) {
+            display:block;
+        }
+        
+    }
+    &__content{
+        padding:2rem;
+        flex:0 0 50%;
+
+        @include respond(tab-land){
+            padding:2rem 2rem 0 2rem;
+        }
+        &-title{
+            font-size: 3rem;
+            line-height: 1.5;
+            padding-bottom: 2rem;
+        }
+        &-text{
+            color:var(--color-neutral-dark);
+            font-family: 'open sans',sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            padding-bottom: 3rem;
+
+            @include respond(tab-port) {
+                padding:0 2rem 1rem 2rem;
+            }
+        }
+    }
+    &__mockups{
+        flex:0 0 50%;
+        background-image: url(../images/illustration-mockups.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size:100% 90%;
+        height:50rem;
+
+        @include respond(tab-land) {
+            background-size:80% 80%;
+            height: 55rem;
+        }
+        @include respond(tab-port) {
+            background-size:70% 95%;
+            height: 45rem;
+        }
+        @include respond(phone) {
+            //background-size:80% 80%;
+            height: 40rem;
+        }
+
+        @include respond(big-desktop) {
+            background-size:80% 70%;
+        }
+    }
+}
+
+
+///////////////////
+///BUTTON
+.btn{
+    &:visited, 
+    &:link {
+        text-decoration: none;
+        border-radius: 10rem;
+        box-shadow: 0 0.2rem rgba(0, 0, 0, 0.2);
+        font-size: 1.6rem;
+        text-align: center;
+        display: inline-block; 
+    }
+    &-white {
+        background-color: #fff;
+        color: var(--color-neutral-dark);
+        padding: 1rem 5rem; 
+
+        @include respond(phone) {
+            padding: 1rem 2rem;
+            font-size: 10px;
+        }
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+        opacity:.8;
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+        opacity:.5;
+    }
+
+    &-md {
+        padding: 1.5rem 5rem; 
+    }
+    &-lg {
+        padding: 2.5rem 8rem; 
+        @include respond(tab-port) {
+            padding: 1.5rem 5rem;
+        }
+    }
+    &-pink{
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+    
+}
+
+
+//////////////////
+///CONTENT
+.content__box{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+    //height:35rem;
+    box-shadow:0 0 0.8rem 0.2rem  rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding:1rem 2rem;
+
+    @include respond(tab-port) {
+        flex-direction: column-reverse;
+        justify-content: center;
+
+        &:nth-child(2){
+            flex-direction: column;
+        }
+        padding:1rem;
+    }
+
+    &:not(:last-of-type){
+        margin-bottom: 5rem;
+    }
+
+    &-img{
+        flex:0 0 50%;
+        height: 90%;
+
+        @include respond(tab-port) {
+            align-self: stretch;
+            padding-bottom: 1rem;
+            width:100%;
+        }
+    }
+    &-text{
+        flex:0 0 50%;
+        &-header{
+            padding-bottom:2rem;
+            @include respond(tab-port) {
+                padding-bottom: .5rem;
+            }
+        }
+        p{
+            line-height: 1.5;
+            @include respond(tab-port) {
+                line-height: 1.7;
+            }
+        }
+        @include respond(tab-port) {
+            text-align: center;
+            padding: 3rem;
+            font-size: 16px;
+        }
+    }
+}
+
+//////////////////
+///CONTENT IMAGE
+// .img-1{
+//     background-image: url(../images/illustration-grow-together.svg);
+//     background-position: right;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+// .img-2{
+//     background-image: url(../images/illustration-flowing-conversation.svg);
+//     background-position: left;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+// .img-3{
+//     background-image: url(../images/illustration-your-users.svg);
+//     background-position: right;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+
+//////////////////
+///FOOTER
+.footer{
+
+}
+
+//////////////////
+///CALL TO ACTION
+.cta{
+    width:60%;
+    height:23rem;
+    background-color: #fff;
+    position:absolute;
+    top:-15rem;
+    left:20%;
+    border-radius:20px;
+    box-shadow:0 0 0.8rem 0.3rem  rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    @include respond(tab-port) {
+        width:80%;
+        left:10%;
+    }
+    h2{
+        padding-bottom: 3rem;
+    }
+}
+
+///////////////////////////////
+///////footer
+.footer{
+
+    &-logo{
+        display: block;
+        padding:15rem 10rem 0 10rem;
+
+        @include respond(tab-port) {
+            padding:15rem 0 0 3rem;
+        }
+    }
+    &__text{
+        color:hsl(193, 100%, 96%);
+        display: block;
+        line-height: 1.7;
+        text-decoration: none;
+    }
+
+    &__info{
+        width:100%;
+        display: inline-block;
+        & > *{
+            padding-bottom: 3rem;
+        }
+        flex:0 0 30%;
+    }
+
+    &__nav{
+        flex:0 0 30%;
+
+        &-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @include respond(tab-port) {
+                display: block;
+            }
+            &--item{
+                flex:0 0 40%;
+                list-style: none;
+
+                @include respond(tab-port) {
+                    &:not(:last-child){
+                        padding-bottom: .5rem;
+                    }
+                }
+            }
+        }
+
+        &__link{
+            display: inline-block;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top:80%;
+                left:0;
+                width:0;
+                height: 3px;
+                background-color: hsl(322, 100%, 66%);
+                transition: all .2s;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+            @include respond(tab-port) {
+                &:active{
+                    color:hsl(322, 100%, 66%);
+                }
+            }
+
+            
+        }
+    }
+
+    &-social{
+        flex:0 0 30%;
+        align-self: stretch;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            text-align: center;
+        }
+    }
+
+    &__icons{
+        display:inline-flex;
+        & > *{
+            margin-right: 1rem;
+        }
+
+        @include respond(tab-port) {
+            margin: 0 auto;
+        }
+    }
+
+    &__copyright {
+        // text-align:right;
+        // padding:5rem 10rem;
+    }
+
+}
+
+///////////////////////////////
+///////icon
+.icon{
+    width:2rem;
+    height:2rem;
+    float:left;
+    transform:translateY(.5rem);
+
+    &-logo{
+        width:24rem;
+        height:4rem;
+    }
+
+    &-social{
+        font-size: 2.5rem;
+
+        &:hover,
+        &:active {
+            color:hsl(322, 100%, 66%);
+        }
+    }
+    
+    &-illustration{
+        width:100%;
+        height:40rem;
+        @include respond(tab-port) {
+            height:35rem;
+        }
+        @include respond(phone) {
+            height:55%;
+        }
+    }
+}
+
+
